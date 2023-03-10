@@ -54,8 +54,6 @@ class ChatManger:
         if wxid and atid and reply_msg:
             self._send_message(wxid, atid, reply_msg)
 
-    # 机器人接到符合的消息后，添加任务
-
     def on_message(self, ws, message):
         self.ws = ws
         message = json.loads(message)
@@ -76,7 +74,7 @@ class ChatManger:
         p = {'method': 'sendText',
              'wxid': 'filehelper',
              'msg': plugin_info,
-             'pid': 0}
+             'pid': self.pid}
         self.ws.send(json.dumps(p))
 
     # 这是一个耗时操作，需要放到线程里,结果返回之后，直接发送信息给微信
