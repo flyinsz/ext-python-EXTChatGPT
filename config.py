@@ -5,4 +5,4 @@ plugin_info = '【ChatGPT聊天机器人】插件已启动\n本插件仅在以�
 # 机器人在EXT框架里的pid
 pid = 20356
 # openai申请的api_key
-api_key = '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'
+api_key = ''
